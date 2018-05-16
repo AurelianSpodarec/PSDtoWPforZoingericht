@@ -1,0 +1,68 @@
+// ==========================================================================
+// #Site Header
+// ==========================================================================
+
+
+.site-header {
+    @include clearfix;
+    background-color: #222222;
+    border-bottom: 4px solid #f78f1e;
+    position: relative;
+    z-index: 9999;
+
+    & a {
+        color: white;
+    }
+
+    &__nexus {
+        background: #222222;
+        margin: 0 auto;
+    }
+
+    &__outer {
+       @extend %container;
+    }
+
+    &__inner {
+        display: inline-flex;
+        width: 100%;
+        background: #222222;
+    }
+
+    &__head {
+    	@include clearfix;
+    	@include media-query-max(medium) {
+    		width: 100%;
+    	}
+    }
+
+    &__logo {
+    	float: left;
+
+    	&--img {
+    		width: 230px;
+    	}
+    }
+
+    &__hamburger {
+    	float: right;
+
+    	@include media-query-min(medium) {
+    		display: none;
+    	}
+    }
+
+}
+
+.site-canvas-animation {
+     overflow-x: hidden;
+
+	@include transition(.3s);
+	
+	&.is-active {
+		transform: translate3d(-300px,0,0);
+	}
+
+}
+
+
