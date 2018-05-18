@@ -1,0 +1,17 @@
+// ==========================================================================
+// #Site Canvas
+// ==========================================================================
+
+
+.site-canvas-animation {
+    overflow-x: hidden;
+
+    @include transition(.3s);
+    
+    @include media-query-max(medium) {
+        &.is-active {
+            transform: translate3d(-300px,0,0);
+        }
+    }
+
+}

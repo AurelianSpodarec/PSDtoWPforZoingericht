@@ -27,10 +27,12 @@
         display: inline-flex;
         width: 100%;
         background: #222222;
+        line-height: 7em;
     }
 
     &__head {
     	@include clearfix;
+        display: list-item;
     	@include media-query-max(medium) {
     		width: 100%;
     	}
@@ -40,7 +42,8 @@
     	float: left;
 
     	&--img {
-    		width: 230px;
+    		width: 200px;
+            vertical-align: middle;
     	}
     }
 
@@ -148,15 +151,6 @@
 
 }
 
-.site-canvas-animation {
-     overflow-x: hidden;
 
-	@include transition(.3s);
-	
-	&.is-active {
-		transform: translate3d(-300px,0,0);
-	}
-
-}
 
 

@@ -7,11 +7,26 @@
 .project-card {	
 	width: 100%;
 	border-top: 6px solid $color-brand;
+	margin-bottom: 1rem;
+	width: 100%;
+
+	@include media-query-min(tablet) {
+		width: calc(50% - 20px);
+		float: left;
+		margin-right: 40px;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
 
 	@include media-query-min(medium) {
 		width: calc(33% - 20px);
-		float: left;
 		margin-right: 35px;
+
+		&:nth-child(2n) {
+			margin-right: 35px;
+		}
 
 		&:nth-child(3n) {
 			margin-right: 0;
@@ -20,7 +35,7 @@
 
 	&__img {
 		position: relative;
-		height: 175px;
+		height: 195px;
 		overflow: hidden;
 		background-position: center center;
     	background-size: cover;
@@ -31,13 +46,17 @@
 	}
 
 	&__title {
-		font-size: 18px;
+		font-size: 14px;
 		letter-spacing: 1px;
 		line-height: 41px;
 		color: rgb(255,255,255);
-		font-family: "Futura";
+		font-family: sans-serif;
 		font-weight: bold;
 		text-align: center;
+	}
+
+	&__section {
+		padding: 1rem 0;
 	}
 
 }

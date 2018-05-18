@@ -18,7 +18,8 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <div id="site-nav-mobile" class="site-nav-mobile">
+
+    <div class="site-nav--mobile">
     <?php
         $args = [
             'theme_location' => 'main-menu',
@@ -31,45 +32,6 @@
     ?>  
     </div>
 
-
-
-<!--     <div class="site-nav-mobile">
-    <ul class="site-nav-mobile__list">
-        <li class="site-nav-mobile__item"><a href="" class="site-nav-mobile__link">home</a></li>
-        <li class="site-nav-mobile__item"><a href="" class="site-nav-mobile__link">diensten</a></li>
-        <li class="site-nav-mobile__item"><a href="" class="site-nav-mobile__link">over ons</a></li>
-        <li class="site-nav-mobile__item">
-            <a href="" class="site-nav-mobile__link">projecten</a>
-            <ul class="site-nav-mobile__dropdown-list">
-                <li><a href="#">wonem</a></li>
-                <li><a href="#">werken</a></li>
-                <li><a href="#">skyboxen</a></li>
-                <li><a href="#">horeca</a></li>
-                <li><a href="#">3d impressies</a></li>
-                <li><a href="#">Adeo Design</a></li>
-            </ul>
-        </li>
-        <li class="site-nav-mobile__item"><a href="" class="site-nav-mobile__link">contact</a></li>
-    </ul>
-
-    <ul class="site-social">
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        </a>
-        </li>
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        </li>
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        </li>
-    </ul>
-    </div> -->
 
 
 <div class="site-canvas-animation">
@@ -87,7 +49,9 @@
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     ?>
     <a class="site-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        <span>
         <img class="site-header__logo--img" src="<?php echo $image[0]; ?>" title="<?php bloginfo( 'name' ); ?>"/>
+        </span>
     </a>
 
     <button class="site-header__hamburger">
@@ -99,10 +63,8 @@
     </button>
     </div>
 
-    
 
     <div class="site-nav">
-
     <?php
         $args = [
             'theme_location' => 'main-menu',
@@ -114,38 +76,19 @@
         wp_nav_menu( $args ); 
     ?>  
 
-
-    <!-- <ul class="site-nav-desktop__list">
-        <li class="site-nav-desktop__item"><a href="" class="site-nav-desktop__link"><span>home</span></a></li>
-        <li class="site-nav-desktop__item"><a href="" class="site-nav-desktop__link"><span>diensten</span></a></li>
-        <li class="site-nav-desktop__item"><a href="" class="site-nav-desktop__link"><span>over ons</span></a></li>
-        <li class="site-nav-desktop__item site-nav-desktop__item--dropdown">
-            <a href="" class="site-nav-desktop__link"><span>projecten</span></a>
-            <ul class="site-nav-desktop__dropdown-list">
-                <li><a href="#">wonem</a></li>
-                <li><a href="#">werken</a></li>
-                <li><a href="#">skyboxen</a></li>
-                <li><a href="#">horeca</a></li>
-                <li><a href="#">3d impressies</a></li>
-                <li><a href="#">Adeo Design</a></li>
-            </ul>
-        </li>
-        <li class="site-nav-desktop__item"><a href="#contact" class="site-nav-desktop__link"><span>contact</span></a></li>
-    </ul> -->
-
-    <ul class="site-social">
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
+    <ul class="site-social-icons">
+        <li class="site-social-icons__item">
+        <a href="#" class="site-social-icons__link">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
         </a>
         </li>
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
+        <li class="site-social-icons__item">
+        <a href="#" class="site-social-icons__link">
             <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
         </li>
-        <li class="site-social__item">
-        <a href="#" class="site-social__link">
+        <li class="site-social-icons__item">
+        <a href="#" class="site-social-icons__link">
             <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
         </li>

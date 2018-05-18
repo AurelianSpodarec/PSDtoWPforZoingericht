@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
   
   // MAIN NAVIGATION MENU TOGGLE
-  var siteNav = document.querySelector(".site-nav-mobile");
+  var siteNav = document.querySelector(".site-nav--mobile");
   var siteHamburger = document.querySelector(".site-header__hamburger");
   var siteCanvas = document.querySelector(".site-canvas-animation");
 

@@ -140,23 +140,23 @@ add_action( 'init', 'register_themepost', 20 );
 function register_themepost() {
     $labels = array(
         'name' => _x( 'projecten', 'my_custom_post','custom' ),
-        'singular_name' => _x( 'Theme', 'my_custom_post', 'custom' ),
+        'singular_name' => _x( 'Project', 'my_custom_post', 'custom' ),
         'add_new' => _x( 'Add New', 'my_custom_post', 'custom' ),
-        'add_new_item' => _x( 'Add New ThemePost', 'my_custom_post', 'custom' ),
-        'edit_item' => _x( 'Edit ThemePost', 'my_custom_post', 'custom' ),
-        'new_item' => _x( 'New ThemePost', 'my_custom_post', 'custom' ),
-        'view_item' => _x( 'View ThemePost', 'my_custom_post', 'custom' ),
-        'search_items' => _x( 'Search ThemePosts', 'my_custom_post', 'custom' ),
-        'not_found' => _x( 'No ThemePosts found', 'my_custom_post', 'custom' ),
-        'not_found_in_trash' => _x( 'No ThemePosts found in Trash', 'my_custom_post', 'custom' ),
-        'parent_item_colon' => _x( 'Parent ThemePost:', 'my_custom_post', 'custom' ),
+        'add_new_item' => _x( 'Add New Project Post', 'my_custom_post', 'custom' ),
+        'edit_item' => _x( 'Edit Project Post', 'my_custom_post', 'custom' ),
+        'new_item' => _x( 'New Project Post', 'my_custom_post', 'custom' ),
+        'view_item' => _x( 'View Project Post', 'my_custom_post', 'custom' ),
+        'search_items' => _x( 'Search Project Posts', 'my_custom_post', 'custom' ),
+        'not_found' => _x( 'No ProjectPosts found', 'my_custom_post', 'custom' ),
+        'not_found_in_trash' => _x( 'No Project Posts found in Trash', 'my_custom_post', 'custom' ),
+        'parent_item_colon' => _x( 'Parent Project Post:', 'my_custom_post', 'custom' ),
         'menu_name' => _x( 'Projectens', 'my_custom_post', 'custom' ),
     );
 
     $args = array(
         'labels' => $labels,
         'hierarchical' => false,
-        'description' => 'Custom Theme Posts',
+        'description' => 'Custom Project Posts',
         'supports' => array( 'title', 'editor', 'thumbnail' ),
         'taxonomies' => array( 'post_tag','projecten_categories'),
         'show_ui' => true,
