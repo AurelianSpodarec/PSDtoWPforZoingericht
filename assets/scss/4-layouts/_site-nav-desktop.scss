@@ -2,7 +2,7 @@
 // #Site Nav
 // ==========================================================================
 
-.site-nav-desktop {
+.site-nav {
 	display: none;
 
 	@include media-query-min(medium) {
@@ -14,18 +14,10 @@
     padding-left: 96px;
     line-height: 5em;
 
-	&__item {
-		float: left;
-		
-		&--dropdown:hover .site-nav-desktop__link span::before {
-			opacity: 1;
-		}
+    & li {
+    	float: left;
 
-		&--dropdown:hover .site-nav-desktop__dropdown-list {
-			transform: translateY(0);
-		}
-
-		&:not(:last-child) a span::after {
+    	&:not(:last-child) a span::after {
 	        content: "";
 	        top: 50%;
 	        transform: translateY(-50%);
@@ -36,6 +28,20 @@
 	        margin-left: 1rem;
 	        background-color: #f78f1d;
 	    }
+    }
+
+	&__item {
+		
+		
+		&--dropdown:hover .site-nav__link span::before {
+			opacity: 1;
+		}
+
+		&--dropdown:hover .site-nav__dropdown-list {
+			transform: translateY(0);
+		}
+
+		
 	}
 
 	&__link {
@@ -74,8 +80,8 @@
 	    & li {
 	    	display: inline-block;
 	    	position: relative;
-		    margin-right: .6rem;
-
+		    float: unset;
+		    
 			&::after {
 				content: "";
 			    top: 50%;

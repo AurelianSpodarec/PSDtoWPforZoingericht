@@ -5,6 +5,9 @@
 
     <div class="site-footer__row">
     <div class="site-footer__col">
+        <a class="site-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        <img class="site-header__logo--img" src="<?php echo $image[0]; ?>" title="<?php bloginfo( 'name' ); ?>"/>
+        </a>
         <h3><span>Zo ingericht</span></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

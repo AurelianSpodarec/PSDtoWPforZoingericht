@@ -38,8 +38,16 @@
 }
 .section {
     @include clearfix;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    z-index: 100;
+ 
+    &--main {
+        @include clearfix;
+        background-color: white;
+        padding: 55px 40px; 
+    }
 }
+ 
+
+ .row {
+    @include clearfix;
+ }
 

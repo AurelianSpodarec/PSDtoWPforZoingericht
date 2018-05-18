@@ -1,0 +1,43 @@
+// ==========================================================================
+// #Project Card
+// ==========================================================================
+
+
+
+.project-card {	
+	width: 100%;
+	border-top: 6px solid $color-brand;
+
+	@include media-query-min(medium) {
+		width: calc(33% - 20px);
+		float: left;
+		margin-right: 35px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+
+	&__img {
+		position: relative;
+		height: 175px;
+		overflow: hidden;
+		background-position: center center;
+    	background-size: cover;
+	}
+
+	&__header {
+		background-color: #212121;
+	}
+
+	&__title {
+		font-size: 18px;
+		letter-spacing: 1px;
+		line-height: 41px;
+		color: rgb(255,255,255);
+		font-family: "Futura";
+		font-weight: bold;
+		text-align: center;
+	}
+
+}

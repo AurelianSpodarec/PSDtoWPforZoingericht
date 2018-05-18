@@ -1,0 +1,43 @@
+// ==========================================================================
+// #Project Card
+// ==========================================================================
+
+
+
+.service-card {	
+	@include clearfix;
+	// &__title {
+
+	// }
+
+	&:nth-child(2n) .service-card__text {
+		float: right;
+	}
+
+	&:nth-child(2n) .service-card__img {
+		float: left;
+		margin-right: 15px;
+		margin-left: unset;
+	}
+
+	&__text {
+		width: 60%;
+		float: left;
+
+		 
+	}
+
+	&__img {
+		float: right;
+	    width: calc(40% - 15px);
+	    height: 311px;
+	    margin-left: 15px;
+	    background-size: cover;
+	    background-position: center center;
+
+	    &:nth-child(2n){
+	    	float: left;
+	    }
+	}
+
+}

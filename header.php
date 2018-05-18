@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -19,23 +19,16 @@
 <body <?php body_class(); ?>>
 
     <div id="site-nav-mobile" class="site-nav-mobile">
-    <ul class="site-nav__list">
-        <li class="site-nav__item"><a class="site-nav__link" href=""><span>home</span></a></li>
-        <li class="site-nav__item"><a class="site-nav__link" href=""><span>home</span></a></li>
-        <li class="site-nav__item"><a class="site-nav__link" href=""><span>home</span></a></li>
-        <li class="site-nav-mobile__item">
-            <a href="" class="site-nav__link">projecten</a>
-            <ul class="site-nav__dropdown-list">
-                <li><a href="#">wonem</a></li>
-                <li><a href="#">werken</a></li>
-                <li><a href="#">skyboxen</a></li>
-                <li><a href="#">horeca</a></li>
-                <li><a href="#">3d impressies</a></li>
-                <li><a href="#">Adeo Design</a></li>
-            </ul>
-        </li>
-        <li class="site-nav__item"><a class="site-nav__link" href=""><span>home</span></a></li>
-    </ul>
+    <?php
+        $args = [
+            'theme_location' => 'main-menu',
+            'container'      => 'ul',
+            'menu_class'     => 'site-nav__list',
+            'container_class' => 'custom-menu-class' ,
+            'walker'        => new Primary_Walker_Nav_Menu()
+        ];
+        wp_nav_menu( $args ); 
+    ?>  
     </div>
 
 
@@ -108,18 +101,19 @@
 
     
 
-    <div class="site-nav-desktop">
+    <div class="site-nav">
 
     <?php
         $args = [
             'theme_location' => 'main-menu',
             'container'      => 'ul',
-            'menu_class'     => 'site-nav-desktop__list',
+            'menu_class'     => 'site-nav__list',
             'container_class' => 'custom-menu-class' ,
             'walker'        => new Primary_Walker_Nav_Menu()
         ];
         wp_nav_menu( $args ); 
     ?>  
+
 
     <!-- <ul class="site-nav-desktop__list">
         <li class="site-nav-desktop__item"><a href="" class="site-nav-desktop__link"><span>home</span></a></li>
