@@ -70,42 +70,52 @@
 	}
 
 	&__link {
+		font-family: "Futura";
+		font-weight: 600;
+		font-size: 13px;
 
 		@include media-query-max(medium) {
 			color: #aaa;
-	        font-weight: 600;
-	        font-size: 13px;
 	        line-height: 50px;
 	        height: 50px;
 	        display: block;
 	        position: relative;
-	        font-family: "Raleway" , sans-serif;
 	        border-bottom: 1px solid #333;
 	        padding: 0 20px;
 	        text-transform: uppercase;
 	        letter-spacing: 1px;
 	        @include transition(all 0.3s ease-in-out);
-
+	       	
 	        &:hover {
 	            color: #fff;
-	            background-color: #2d2d2d;
 	        }
 	    }
 		@include media-query-min(medium) {
 	    	padding: 0 1rem;
 			display: block;
 			position: relative;
+			padding: 0 1rem;
+		    display: block;
+		    letter-spacing: 1px;
+		    position: relative;
+		    padding-top: 9px;
 
 			& span {
 				position: relative;
 
 				&::before {
 					opacity: 0;
-					//@extend %triangle-bottom;
 					z-index: 9000;
-					right: 50%;
-					@include transition(.25s);
+					@include transition(.5s);
 					@include transform(translateX(50%));
+					@include absolute(right 50% bottom -1px);
+					content: '';
+				    display: block;
+				    @include box(0);
+				    overflow:hidden;
+				    border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 8px solid #f78f1e
 				}
 			}
 		}
@@ -117,7 +127,6 @@
 	            color: #888;
 	            font-size: 11px;
 	            line-height: 45px;
-	            font-family: "Raleway", sans-serif;
 	            text-transform: uppercase;
 	            letter-spacing: 1px;
 	            font-weight: 600;
@@ -152,9 +161,9 @@
 		    display: block;
 		    width: 100%;
 		    text-align: center;
-		    line-height: 3em;
+		    line-height: 2.5em;
 			@include transform(translateY(-100%));
-	    	transition: .25s;
+	    	@include transition(.5s);
 	    	z-index: -1;
 
 		    & li {
@@ -181,6 +190,7 @@
 
 		    & a {
 		    	display: block;
+		    	padding-top: 0;
 		    	padding-right: 1rem;
 		    }
 		}

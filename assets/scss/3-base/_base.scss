@@ -10,10 +10,8 @@
     }
 }
 
- 
-
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Open Sans";
     font-size: $global-font-size;
     line-height: ($global-line-height/$global-font-size);
     color: $global-text-color;
@@ -30,10 +28,6 @@ a {
     @include transition(.2s ease-in-out);
     text-decoration: none;
     color: rgb(28,28,28);
-
-    &:hover {
-        color: $color-brand;
-    }
 }
 
 img {
@@ -63,8 +57,17 @@ h6 {
     padding: 0;
     margin-bottom: 1.2rem;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: bold;
     color: #f18c1e;
+    letter-spacing: 2px;
+    font-family: "Futura";
+}
+
+h2 {
+    @include media-query-max(tablet) {
+
+    }
+    font-size: 1rem;
 }
 
 h4 {
@@ -74,10 +77,11 @@ h4 {
 p {
     margin: 0;
     padding: 0;
-    font-size: 17px;
-    line-height: 31px;
+    font-size: 13px;
+    line-height: 26px;
+    font-family: "Open Sans";
     color: rgb(110,110,110);
-    font-family: "Futura BT";
+    margin-bottom: 35px;
 }
 
 hr {
@@ -89,4 +93,14 @@ hr {
 
 span {
     display: block;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-color: #363636;
+    font-size: inherit;
 }

@@ -32,7 +32,7 @@
 @import "4-layouts/site-canvas";
 @import "4-layouts/site-footer";
 @import "4-layouts/site-header";
-@import "4-layouts/site-nav-desktop";
+@import "4-layouts/site-nav";
 @import "4-layouts/site-social-icons";
 
 // ==========================================================================
@@ -40,11 +40,15 @@
 // ==========================================================================
 @import "5-objects/extends";
 @import "5-objects/buttons";
+@import "5-objects/header";
 @import "5-objects/triangle";
 
 // ==========================================================================
 // 6-modules
 // ==========================================================================\
+@import "6-modules/carousel";
+@import "6-modules/contact-form";
 @import "6-modules/gallery";
 @import "6-modules/project-card";
 @import "6-modules/service-card";
+@import "6-modules/video-page";

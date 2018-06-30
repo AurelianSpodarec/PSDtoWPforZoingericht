@@ -1,0 +1,94 @@
+// ==========================================================================
+// #Project Card
+// ==========================================================================
+
+
+
+.video {
+
+	&__row {	
+		
+		padding-bottom: 25px;
+		position: relative;
+		&:after {
+				position: absolute;
+			    display: block;
+			    overflow: hidden;
+			    top: 0;
+			    width: 100%;
+			    height: 5px;
+			    content: '';
+			    background-color: #ff0000;
+			    background-color: #f7f7f7;
+			}
+		&--inner {
+			@include clearfix;
+			padding-top: 30px;
+		}
+	}
+
+	&__embed-wrap {
+		position: relative;
+ 	
+
+ 		&--desktop {
+ 			display: none;
+ 			@include media-query-min(tablet) {
+ 				display: block;
+ 			}
+ 		}
+
+ 		&--mobile {
+ 			@include media-query-min(tablet) {
+ 				display: none;
+ 			}
+ 		}
+
+		@include media-query-min(tablet) {
+			width: 65%;
+			float: left;
+			
+		}
+
+		& iframe {
+			width: 100%;
+			min-height: 240px;
+			@include media-query-min(tablet) {
+				 
+				height: 400px;
+			}
+		}
+		
+	}
+
+	&__embed {
+	 
+	}
+
+	&__content {
+		@include media-query-min(tablet) {
+			width: 35%;
+			float: left;
+			padding-left: 20px;
+		}
+		
+	}
+
+	&__title {
+		background-color: #222222;
+		color: white;
+		padding: 1rem;
+    	font-size: .8rem;
+    	text-align: center;
+    	margin-bottom: 0;
+
+    	@include media-query-min(tablet) {
+    		margin-bottom: 1rem;
+    	}
+	}
+
+	&__desc {
+
+	}
+
+}

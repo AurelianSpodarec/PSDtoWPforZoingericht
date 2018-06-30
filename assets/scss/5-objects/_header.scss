@@ -1,0 +1,64 @@
+// ==========================================================================
+// #Header
+// ==========================================================================
+
+
+.header {
+	position: relative;
+	display: inline-block;
+
+	& span {
+		position: relative;
+		display: inline-block;
+	  	position: relative;
+		padding-left: 18px;
+    	padding-right: 25px;
+	}
+
+}
+
+.header-triangle {
+
+	&:before {
+		content: '';
+	    display: block;
+	    @include absolute(top 50% bottom 50%);
+	    @include box(0);
+	    overflow: hidden;
+	  
+	    transform: translateY(-50%);
+	    border-top: 5px solid transparent;
+	    border-left: 9px solid $color-brand;
+	    border-bottom: 5px solid transparent;
+	}
+
+}
+
+.header-underline {
+	display: block;
+	width: 100%;
+    overflow: hidden;
+   	margin: 0 0 30px 0;
+   	display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #f7f7f7;
+}
+
+.header-line {
+	@include media-query-min(tablet) {
+	    width: 100%;
+	    overflow: hidden;
+
+		&:after {
+			position: absolute;
+	    	top: 51%;
+	    	overflow: hidden;
+	    	width: 100%;
+	    	height: 5px;
+	    	content: '\a0';
+	    	background-color: #f7f7f7;
+		}
+	}
+
+}

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="container">
-<div class="section--main">
+<div class="section--main" style="padding-bottom: 5px;">
 
    <?php
         $args = array( 
@@ -18,13 +18,15 @@
 
     	<?php if ( $counter % 2 === 0) : ?>
     	<article class="service-card">
-       		<h2 class="service-card__title"><?php the_title(); ?></h2> 
+       		<h2 class="service-card__title header-triangle header-line header"><span><?php the_title(); ?></span></h2> 
 
-       		<div class="row">
+          <div class="service-card__img" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+          
+       		 <div class="row">
        			<div class="service-card__text">
        			<?php the_content(); ?>
        			</div>
-       		<div class="service-card__img" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+       		
        		</div>
 
        	</article>

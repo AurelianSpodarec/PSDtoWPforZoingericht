@@ -3,19 +3,40 @@
 // ==========================================================================
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+//@import '~fonts/futura/font-futura.css';
+
+
+@font-face{
+    src: url(./../fonts/futura/futuraLT.ttf);
+    font-family: Futura;
+    font-weight: 500;
+}
+
+@font-face{
+    src: url(./../fonts/futura/futuraLT-Bold.ttf);
+    font-family: Futura;
+    font-weight: bold;
+}
+
+@font-face{
+    src: url(./../fonts/futura/futuraLT-Heavy.ttf);
+    font-family: Futura;
+    font-weight: 900;
+}
+ 
 
 $font-family-open-sans: 'Open Sans', sans-serif;
-$font-family-lato: 'Lato';
+$font-family-futura: 'Futura';
 
-$font-family-primary: $font-family-open-sans;
-$font-family-secondary: $font-family-lato;
+$font-family-primary: $font-family-futura;
+$font-family-secondary: $font-family-open-sans;
 
-$base-font-family: $font-family-open-sans, $font-family-lato;
+$base-font-family: $font-family-primary, $font-family-secondary;
 
 
 $base-scale: 1.5;
 $base-unit: 'em';
-$base-font-size: 15px;
+$base-font-size: 16px;
 
 $base-line-height: $base-scale * $base-font-size;
  
@@ -39,3 +60,9 @@ $base-line-height: $base-scale * $base-font-size;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// $font-path: "../../fonts/futura" !default;
+// @font-face{
+//   src: url('#{$font-path}/futura.ttf');
+//    ...
+// }

@@ -27,7 +27,11 @@
         display: inline-flex;
         width: 100%;
         background: #222222;
-        line-height: 7em;
+        line-height: 6em;
+
+        @include media-query-min(medium) {
+            padding: 0 15px;
+        }
     }
 
     &__head {
@@ -42,7 +46,7 @@
     	float: left;
 
     	&--img {
-    		width: 200px;
+    		width: 155px;
             vertical-align: middle;
     	}
     }

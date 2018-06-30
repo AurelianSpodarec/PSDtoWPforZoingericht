@@ -6,14 +6,38 @@
 	background-color: #222222;
 	@include clearfix;
 	border-top: 4px solid #f78f1e;
-	padding: 30px 0 90px;
-	font-size: 17px;
+	padding: 45px 0 50px;
+    font-size: 13px;
 	line-height: 31px;
 	color: rgb(238,238,238);
-	font-family: "Futura BT";
+
+	// @include media-query-min(medium) {
+	// 	padding-bottom: 70px;
+	// }
+
+	& h3 {
+		font-size: 17px;
+		letter-spacing: 2px;
+		font-weight: bold;
+	    margin-bottom: .4em;
+
+		& span {
+			color: $color-brand;
+		}
+	}
+
+	& p {
+		color: #dfdddd;
+		font-size: 12px;
+    	line-height: 23px;
+	}
 
 	& a {
-		color: rgb(238,238,238);
+		color: #dfdddd;
+	}
+
+	& blockquote span {
+		color: #dfdddd;
 	}
 
 	&__outer {
@@ -21,20 +45,70 @@
 	}
 
 	&__inner {
-		
+		@include media-query-min(medium) {
+			padding: 0 30px;
+		}
 	}
 
 	&__row {
 		@include clearfix;
 	}
 
+	&__logo {
+		display: block;
+    	margin-bottom: 1.2em;
+
+    	&--img {
+    		width: 115px;
+    	}
+	}
+
 	&__col {
 		width: 100%;
 
-		@include media-query-min(medium) {
-			width: calc(33% - 2.5%);
-			float: left;
+		@include media-query-max(medium) {
+			margin-bottom: 30px;
 		}
+
+		@include media-query-min(medium) {
+			width: calc(33% - 50px);
+			float: left;
+			margin-right: 80px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__project-list {
+		
+		& li {
+			border-bottom: 3px solid #363636;
+		}
+
+		& a {
+			padding: .3rem 0;
+		    display: block;
+		}
+
+	}
+
+	&__contact {
+		color: #dfdddd;
+		&--info {
+			padding: 10px;
+			border-top: 4px solid;
+		    border-bottom: 4px solid;
+		    border-color: #363636;
+		    font-size: inherit;
+		    line-height: 2em;
+		}
+
+		&--text {
+			padding: 10px;
+		}
+
 	}
 
 

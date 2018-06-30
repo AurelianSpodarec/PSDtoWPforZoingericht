@@ -19,6 +19,17 @@ module.exports = {
 		    		use:"css-loader!sass-loader"
 		    	})
 	   		},
+	   		{
+		    	test  : /\.(jpe?g|png|gif|svg)$/i,
+		    	use: [
+		    		"file-loader?name=[name].[ext]&outputPath=../img/",
+		    		'image-webpack-loader'
+		    	]
+	   		},
+	   		{
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=[name].[ext]&outputPath=../fonts/'
+            }
 		],
 
 	},

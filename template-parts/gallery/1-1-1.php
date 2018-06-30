@@ -8,7 +8,8 @@
 		<?php if ( get_sub_field( 'image') ) { ?>
 			<div class="gallery__col--3">
 				<?php if ( get_sub_field( 'image') ) { ?>
-					<div class="gallery__img" style="background-image: url(<?php the_sub_field( 'image' ); ?>);"></div>
+					<!-- <div class="gallery__img" style="background-image: url(<?php the_sub_field( 'image' ); ?>);"></div> -->
+					<img class="gallery__img" src="<?php the_sub_field( 'image' ); ?>;">
 				<?php } ?>
 			</div>
 		<?php } ?>

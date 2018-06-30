@@ -1,10 +1,33 @@
 <?php get_header(); ?>
 
+
+
 <main class="container">
+
+
+
+
+	 
+    <?php if( have_rows('gallery_main_image_wrap') ): 
+        while( have_rows('gallery_main_image_wrap') ): the_row(); ?>
+        <?php if (get_sub_field('gallery_main_image')) {  ?>
+
+    	<div class="gallery__main">
+
+    		<img src="<?php the_sub_field('gallery_main_image'); ?>">
+
+    		<div class="gallery__main-btn-wrap">
+    		<a class="btn btn--secondary gallery__main-btn" href="<?php the_sub_field('image_button_link'); ?>">NAAE DE SITE</a>
+    		</div>
+    	</div>
+
+    	<?php } ?>
+    <?php endwhile; endif;?>
+ 
+
+
+
 <div class="section--main">
-
-
-<?php the_title(); ?>
 
 
 <?php if ( have_rows( 'gallery' ) ): ?>

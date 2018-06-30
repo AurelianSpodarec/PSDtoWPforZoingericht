@@ -3,6 +3,9 @@
 // ==========================================================================
 
 .btn {
+	line-height: 15px;
+    font-size: 10px;
+
 	display: inline-block;
 	background: none;
 	@include transition(.25s ease-in-out);
@@ -13,7 +16,6 @@
     cursor: pointer;
     border: none;
     line-height: 1em;
-    text-transform: uppercase;
 
     &--alt {
     	color: white;
@@ -25,6 +27,21 @@
 
 	&--primary {
 		border: 3px solid $color-brand;
+	}
+
+	&--secondary {
+		line-height: 15px;
+    	font-size: 10px;
+
+		background: $color-brand;
+		color: white;
+ 
+	    letter-spacing: 1px;
+ 
+	    @include media-query-min(tablet) {
+    		font-size: 13px;
+			line-height: 21px;
+    	}
 	}
 
 	// Button Sizes
@@ -46,13 +63,17 @@
 	}
 
 	&--contact {
-		font-weight: 800;
-		background-color: $color-brand;
-		font-size: 14px;
-		border-radius: 3px;
-		color: rgb(28,28,28);
-		padding: .4rem .8rem;
-    	line-height: 1rem;
+		line-height: 15px;
+    	font-size: 10px;
+    	letter-spacing: 1px;
+    	@include media-query-min(tablet) {
+    		font-size: 13px;
+			line-height: 21px;
+    	}
+		background-color: #858585;
+		
+		color: rgb(255,255,255);
+		text-align: center;
 	}
 
 }
