@@ -2,6 +2,94 @@
 
 
 <main class="container">
+	
+		<span class="slider-btn-prev">PREV</span>
+		<span class="slider-btn-next">NEXT</span>
+		
+		<div class="controls">
+		
+		</div>
+	<section class="slider ">
+          <div class="slider--inner">
+          <!-- <img src="http://via.placeholder.com/1750x450"> -->
+
+               <ul class="slider-container">
+               <li class="slider-item">
+               <div class="slider-caption">
+
+               <h2 class="slider-item__title">Mexican Grill</h2>
+
+               <div>
+               <ul class="slider-details">
+                    <li class="slider-caption__info">
+                    <i class="fa fa-cutlery"></i>
+                    <a href="" rel="tag">For Family</a>  
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-clock-o"></i>
+                    <a href="" rel="tag">30 min</a> 
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-user"></i> by Dorota
+                    </li>
+               </ul>
+               </div>
+
+               <a class="btn btn--carousel" href="single-recipte.html">View Recipt</a>
+               </div>
+               </li><!-- /item -->
+               <li class="slider-item showing">
+               <div class="slider-caption">
+
+               <h2 class="slider-item__title">Olive Meals</h2>
+
+               <div>
+               <ul class="slider-details">
+                    <li class="slider-caption__info">
+                    <i class="fa fa-cutlery"></i>
+                    <a href="" rel="tag">For Family</a>  
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-clock-o"></i>
+                    <a href="" rel="tag">15 min</a> 
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-user"></i> by Dorota
+                    </li>
+               </ul>
+               </div>
+
+               <a class="btn btn--carousel" href="single-recipte.html">View Recipt</a>
+               </div>
+               </li>
+               <li class="slider-item">
+               <div class="slider-caption">
+
+               <h2 class="slider-item__title">Rosted Chicken</h2>
+
+               <div>
+               <ul class="slider-details">
+                    <li class="slider-caption__info">
+                    <i class="fa fa-cutlery"></i>
+                    <a href="" rel="tag">For Family</a>  
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-clock-o"></i>
+                    <a href="" rel="tag">75 min</a> 
+                    </li>
+                    <li class="slider-caption__info">
+                    <i class="fa fa-user"></i> by Dorota
+                    </li>
+               </ul>
+               </div>
+
+               <a class="btn btn--carousel" href="single-recipte.html">View Recipt</a>
+               </div>
+               </li>
+               </ul>
+
+          </div>
+          </section>
 
 	<section class="carousel">
 	  <div class="carousel-inner">
@@ -47,7 +135,7 @@
 	</section>
 
 
-	<section style="padding-bottom: 45px;">
+	<section style="padding-bottom: 30px;">
 	<h2 class="header header-triangle"><span>UITGELICHTE PROJECTEN</span></h2>
 	<?php get_template_part( 'template-parts/modules/module', 'project-card' ); ?>
 	</section>

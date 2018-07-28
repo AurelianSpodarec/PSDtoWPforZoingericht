@@ -5,7 +5,7 @@
 .site-footer {
 	background-color: #222222;
 	@include clearfix;
-	border-top: 4px solid #f78f1e;
+	// border-top: 4px solid #f78f1e;
 	padding: 45px 0 50px;
     font-size: 13px;
 	line-height: 31px;
@@ -71,7 +71,7 @@
 		}
 
 		@include media-query-min(medium) {
-			width: calc(33% - 50px);
+			width: calc(33% - 51px);
 			float: left;
 			margin-right: 80px;
 

@@ -42,7 +42,11 @@
     &--main {
         @include clearfix;
         background-color: white;
-        padding: 45px 40px; 
+        padding: 45px 0;
+        
+        @include media-query-min(tablet) {
+            padding: 45px 40px;
+        } 
     }
 }
  

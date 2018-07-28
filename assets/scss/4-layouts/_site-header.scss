@@ -6,9 +6,29 @@
 .site-header {
     @include clearfix;
     background-color: #222222;
-    border-bottom: 4px solid #f78f1e;
-    position: relative;
+    @include transition(0.25s ease-in-out);
     z-index: 9999;
+    @include fixed(top 0 right 0 left 0);
+
+    &.is-sticky {
+        @include transform(translateY(-120%));
+        top: 0;
+        background: #262626;
+        -webkit-box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+        box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+
+        & .site-header__inner {
+            line-height: 4em;
+        }
+    }
+
+    &.sticky-show {
+        @include transform(translateY(0));
+
+    
+    }
+
+
 
     & a {
         color: white;
@@ -28,6 +48,7 @@
         width: 100%;
         background: #222222;
         line-height: 6em;
+         @include transition(0.25s ease-in-out);
 
         @include media-query-min(medium) {
             padding: 0 15px;

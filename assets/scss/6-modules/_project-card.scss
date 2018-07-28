@@ -55,7 +55,7 @@
 	}
 
 	width: 100%;
-	border-top: 6px solid $color-brand;
+	// border-top: 6px solid $color-brand;
 	margin-bottom: 1rem;
 	width: 100%;
 
@@ -96,12 +96,20 @@
 
 	&__title {
 		font-size: 14px;
+		line-height: 28px;
+
+		padding: 10px 0;
+
 		letter-spacing: 1px;
-		line-height: 41px;
 		color: rgb(255,255,255);
 		font-family: sans-serif;
 		font-weight: bold;
 		text-align: center;
+
+		@include media-query-min(tablet) {
+			line-height: 41px;
+			padding: 0 15px;
+		}
 	}
 
 	&__section {

@@ -15,7 +15,12 @@ body {
     font-size: $global-font-size;
     line-height: ($global-line-height/$global-font-size);
     color: $global-text-color;
-    background-color: $global-background-color;
+
+    background-color: white;
+
+    @include media-query-min(tablet) {
+        background-color: $global-background-color;
+    }
 
     @if ($global-body-antialiased) {
         -webkit-font-smoothing: antialiased;

@@ -73,6 +73,7 @@
 		font-family: "Futura";
 		font-weight: 600;
 		font-size: 13px;
+		text-transform: uppercase;
 
 		@include media-query-max(medium) {
 			color: #aaa;
@@ -98,7 +99,8 @@
 		    display: block;
 		    letter-spacing: 1px;
 		    position: relative;
-		    padding-top: 9px;
+		    padding-top: 10px;
+    		font-size: .75rem;
 
 			& span {
 				position: relative;
@@ -108,7 +110,7 @@
 					z-index: 9000;
 					@include transition(.5s);
 					@include transform(translateX(50%));
-					@include absolute(right 50% bottom -1px);
+					@include absolute(right 50% bottom 0);
 					content: '';
 				    display: block;
 				    @include box(0);

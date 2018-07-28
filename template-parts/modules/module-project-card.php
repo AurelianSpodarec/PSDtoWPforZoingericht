@@ -35,10 +35,6 @@
 			<section class="project-card__section">
 				<?php the_content(); ?>
 			</section>
-
-			<footer class="project-card__footer">
-			<a href="<?php the_permalink(); ?>" class="btn btn--contact">Merr Info</a>
-			</footer>
 		</article>
 
 
